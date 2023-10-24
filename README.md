@@ -14,10 +14,10 @@ Abre la terminal en Visual Studio Code y ejecuta el siguiente comando para insta
 
 ```bash
 npm install -g json-server
-
+```
 ### 2. Iniciar el servidor JSON: Ahora puedes iniciar el servidor JSON utilizando el siguiente comando en la terminal:
 
 ```bash
 json-server --watch db.json
-
+```
 Esto iniciará el servidor JSON y observará los cambios en el archivo db.json. Por defecto, el servidor se inicia en http://localhost:3000.
