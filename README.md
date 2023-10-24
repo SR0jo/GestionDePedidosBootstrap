@@ -1,4 +1,4 @@
-# GestionDePedidosBootstrap
+# Gestion De Pedidos en Bootstrap
 # README para JSON Server en Visual Studio Code
 
 ## Requisitos Previos
