@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Tablero de Pedidos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-primary text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <h1>Pedidos Boot</h1>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn btn-light">Inicio</a>
+                <a href="#" class="btn btn-light">Pedidos</a>
+            </div>
+        </div>
+    </header>
+  <div class="container my-4">
+    <h1 class="text-center">Tablero de Pedidos</h1>
+    <div class="row">
+      <div class="col-md-4" id="porHacer">
+        <h3>Por Hacer <!-- Botón para abrir el modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+              Agregar tarea
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+            
+                  <!-- Encabezado del modal -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Agregar tarea</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+            
+                  <!-- Cuerpo del modal -->
+                  <div class="modal-body">
+                    <form id="task-form">
+                      <div class="form-group">
+                        <label for="task-title">Título:</label>
+                        <input type="text" id="task-title" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="task-description">Descripción:</label>
+                        <textarea id="task-description" class="form-control"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="task-title">Link de imagen:</label>
+                        <input type="text" id="task-img" class="form-control">
+                      </div>
+                    </form>
+                  </div>
+            
+                  <!-- Pie de página del modal -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="save-task1">Guardar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                  </div>
+            
+                </div>
+              </div>
+            </div>
+            
+            
+        <!-- Los pedidos por hacer se insertarán aquí -->
+      </div>
+      <div class="col-md-4" id="enProceso">
+        <h3>En Proceso <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Agregar tarea
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+          
+                <!-- Encabezado del modal -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Agregar tarea</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+          
+                <!-- Cuerpo del modal -->
+                <div class="modal-body">
+                  <form id="task-form">
+                    <div class="form-group">
+                      <label for="task-title">Título:</label>
+                      <input type="text" id="task-title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="task-description">Descripción:</label>
+                      <textarea id="task-description" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-title">Link de imagen:</label>
+                        <input type="text" id="task-img" class="form-control">
+                      </div>
+                  </form>
+                </div>
+          
+                <!-- Pie de página del modal -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="save-task2">Guardar</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+          </h3>
+        <!-- Los pedidos en proceso se insertarán aquí -->
+      </div>
+      <div class="col-md-4" id="terminado">
+        <h3>Terminado <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Agregar tarea
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+          
+                <!-- Encabezado del modal -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Agregar tarea</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+          
+                <!-- Cuerpo del modal -->
+                <div class="modal-body">
+                  <form id="task-form">
+                    <div class="form-group">
+                      <label for="task-title">Título:</label>
+                      <input type="text" id="task-title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="task-description">Descripción:</label>
+                      <textarea id="task-description" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-title">Link de imagen:</label>
+                        <input type="text" id="task-img" class="form-control">
+                      </div>
+                  </form>
+                </div>
+          
+                <!-- Pie de página del modal -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="save-task3">Guardar</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+          </h3>
+        <!-- Los pedidos terminados se insertarán aquí -->
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-white p-3 mt-5">
+    <div class="container">
+        <p class="text-center">© 2023 Pedidos Boot - Todos los derechos reservados</p>
+    </div>
+</footer>
+
+  <!-- Opcional: incluye jQuery y Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script>
+    // Obtiene los pedidos del archivo JSON
+    fetch('db.json')
+      .then(response => response.json())
+      .then(data => {
+        const pedidos = data.pedidos;
+        const contenedorPorHacer = document.getElementById('porHacer');
+        const contenedorEnProceso = document.getElementById('enProceso');
+        const contenedorTerminado = document.getElementById('terminado');
+
+        // Crea una columna para cada pedido
+        pedidos.forEach(pedido => {
+          const tarjeta = document.createElement('div');
+          tarjeta.className = 'card';
+
+          const imagen = document.createElement('img');
+          imagen.src = pedido.img;
+          imagen.className = 'card-img-top';
+
+          const cuerpoTarjeta = document.createElement('div');
+          cuerpoTarjeta.className = 'card-body';
+
+          const tituloTarjeta = document.createElement('h5');
+          tituloTarjeta.className = 'card-title';
+          tituloTarjeta.textContent = pedido.title;
+
+          const textoTarjeta = document.createElement('p');
+          textoTarjeta.className = 'card-text';
+          textoTarjeta.textContent = pedido.body;
+
+          cuerpoTarjeta.appendChild(tituloTarjeta);
+          cuerpoTarjeta.appendChild(textoTarjeta);
+
+          tarjeta.appendChild(imagen);
+          tarjeta.appendChild(cuerpoTarjeta);
+
+          // Agrega el pedido al contenedor correspondiente
+          if (pedido.list === 1) {
+            contenedorPorHacer.appendChild(tarjeta);
+          } else if (pedido.list === 2) {
+            contenedorEnProceso.appendChild(tarjeta);
+          } else if (pedido.list === 3) {
+            contenedorTerminado.appendChild(tarjeta);
+          }
+        });
+      });
+      // Maneja el evento de envío del formulario
+document.getElementById('save-task1').addEventListener('click', () => {
+  // Recoge los valores del formulario
+  const title = document.getElementById('task-title').value;
+  const description = document.getElementById('task-description').value;
+  const img = document.getElementById('task-img').value;
+
+  // Crea un nuevo pedido
+  const nuevoPedido = {
+    id: Date.now(), // Usa la fecha actual como ID único
+    title: title,
+    body: description,
+    img: img,
+    list: 1 // Por hacer
+  };
+
+  // Envía el nuevo pedido al servidor JSON
+  fetch('http://localhost:3000/pedidos', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(nuevoPedido)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Pedido agregado:', data);
+    // Aquí puedes actualizar tu interfaz de usuario para mostrar el nuevo pedido
+
+    // Limpia el formulario
+    document.getElementById('task-title').value = '';
+    document.getElementById('task-description').value = '';
+    document.getElementById('task-img').value = '';
+
+    // Cierra el modal
+    $('#myModal').modal('hide');
+  })
+  .catch(error => console.error('Error:', error));
+});
+// Maneja el evento de envío del formulario
+document.getElementById('save-task2').addEventListener('click', () => {
+  // Recoge los valores del formulario
+  const title = document.getElementById('task-title').value;
+  const description = document.getElementById('task-description').value;
+  const img = document.getElementById('task-img').value;
+
+  // Crea un nuevo pedido
+  const nuevoPedido = {
+    id: Date.now(), // Usa la fecha actual como ID único
+    title: title,
+    body: description,
+    img: img,
+    list: 1 // Por hacer
+  };
+
+  // Envía el nuevo pedido al servidor JSON
+  fetch('http://localhost:3000/pedidos', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(nuevoPedido)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Pedido agregado:', data);
+    // Aquí puedes actualizar tu interfaz de usuario para mostrar el nuevo pedido
+
+    // Limpia el formulario
+    document.getElementById('task-title').value = '';
+    document.getElementById('task-description').value = '';
+    document.getElementById('task-img').value = '';
+
+    // Cierra el modal
+    $('#myModal').modal('hide');
+  })
+  .catch(error => console.error('Error:', error));
+});
+// Maneja el evento de envío del formulario
+document.getElementById('save-task3').addEventListener('click', () => {
+  // Recoge los valores del formulario
+  const title = document.getElementById('task-title').value;
+  const description = document.getElementById('task-description').value;
+  const img = document.getElementById('task-img').value;
+
+  // Crea un nuevo pedido
+  const nuevoPedido = {
+    id: Date.now(), // Usa la fecha actual como ID único
+    title: title,
+    body: description,
+    img: img,
+    list: 1 // Por hacer
+  };
+
+  // Envía el nuevo pedido al servidor JSON
+  fetch('http://localhost:3000/pedidos', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(nuevoPedido)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Pedido agregado:', data);
+    // Aquí puedes actualizar tu interfaz de usuario para mostrar el nuevo pedido
+
+    // Limpia el formulario
+    document.getElementById('task-title').value = '';
+    document.getElementById('task-description').value = '';
+    document.getElementById('task-img').value = '';
+
+    // Cierra el modal
+    $('#myModal').modal('hide');
+  })
+  .catch(error => console.error('Error:', error));
+});
+  </script>
+
+</body>
+</html>
